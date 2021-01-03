@@ -6,7 +6,7 @@ import {api_key} from '../constants'
 
  export function ajaxGetNewsForSearch(item){
     console.log("search value :", item)
-    var request =axios.get("https://newsapi.org/v2/everything?q="+item+"&apiKey="+api_key)
+    var request =axios.get("v2/everything?q="+item+"&apiKey="+api_key)
     return(dispatch)=>{
         request.then(
             (response)=>{
@@ -18,7 +18,7 @@ import {api_key} from '../constants'
  export function ajaxGetNews(){
 
     //request is a (caller side) promise
-    var request =axios.get("https://newsapi.org/v2/top-headlines?country=ca&apiKey="+api_key)
+    var request =axios.get("v2/top-headlines?country=ca&apiKey="+api_key)
     return(dispatch)=>{
         request.then(
             (response)=>{

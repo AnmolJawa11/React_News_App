@@ -1,6 +1,7 @@
 {
   "name": "covid_tracker_canada",
   "version": "0.1.0",
+  "proxy":"https://newsapi.org/",
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
