@@ -1,0 +1,28 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import MainAppWithStore from './MainAppWithStore';
+import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux'
+import {createStore,applyMiddleware} from 'redux';
+import ReduxThunk from 'redux-thunk';
+import rootReducer from './StoreManager/rootReducer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+var defaultState={}
+
+var store=createStore(rootReducer,applyMiddleware(ReduxThunk))
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+    <MainAppWithStore />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

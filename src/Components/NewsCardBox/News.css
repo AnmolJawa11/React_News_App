@@ -1,0 +1,28 @@
+.Box{
+    padding-top: 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.card .hur:hover{
+    transform: scale(1.1)
+
+}
+
+.card .title{
+    background-color: rgba(229, 226, 235, 0.932);
+
+}
+
+.tex{
+    font-size:small;
+    justify-content: left;
+}
+.justi{
+    justify-content: right;
+}
